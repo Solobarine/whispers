@@ -80,6 +80,12 @@ To run the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## FUTURE FEATURES <a name="future-features"></a>
+
+- JWT
+- Views
+- User Authentication
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
