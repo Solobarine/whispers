@@ -73,7 +73,6 @@ To run the project, execute the following command:
 
 ## 👥 Author <a name="authors"></a>
 👤 **Akpuru Solomon
-
 - GitHub: [@githubhandle](https://github.com/solobarine)
 - Twitter: [@twitterhandle](https://twitter.com/solomonakpuru)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/solomon-akpuru)
@@ -90,7 +89,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
