@@ -21,9 +21,9 @@
 - [📝 License](#license)
 
 
-# 📖 [Swift] <a name="about-project"></a>
+# 📖 [Whispers] <a name="about-project"></a>
 
-**[Swift]** is a Ruby on Rails blogs website that users can use to write their blogs, like a blog or comment on other users blogs.
+**[Whispers]** is a Ruby on Rails blogs website that users can use to write their blogs, like a blog or comment on other users blogs.
 
 ## 🛠 Built With <a name="built-with"></a>
 
