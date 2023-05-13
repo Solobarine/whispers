@@ -1,1 +1,8 @@
-<h1>This a list of all users</h1>
+<section id="all_users">
+    <h1>This a list of all users</h1>
+    <div>
+        <% 5.times do %>
+            <%= render 'user' %>
+        <% end %>
+    </div>
+</section>

@@ -13,3 +13,96 @@
  *= require_tree .
  *= require_self
  */
+
+ /* USER PARTIAL */
+
+ .short_user {
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+ }
+
+ .profile_image {
+    width: 120px;
+    border: 2px solid black;
+ }
+
+
+ .short_bio {
+    position: relative;
+    border: 1px solid black;
+    padding: 10px;
+    width: 400px;
+ }
+
+ .short_bio > p {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    font-size: 14px;
+ }
+
+ /* POSTS PARTIAL */
+ .post_preview {
+    width: 550px;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+ }
+
+ .post_preview > small {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 14px;
+ }
+
+ /* USERS */
+
+ #all_users {
+    display: flex;
+    flex-direction: column;
+ }
+
+ /* USER */
+
+ #bio {
+    width: 550px;
+    border: 1px solid black;
+    padding: 10px;
+ }
+
+ #user_posts {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+ }
+
+ #single_user > button {
+    padding: 10px 20px;
+    box-shadow: 0 2px 0px 3px black;
+    margin: 20px 0;
+ }
+
+ /* POST */
+
+ #top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ #description {
+    padding: 10px;
+    border: 2px solid black;
+    width: 550px;
+ }
+
+ #post_comments {
+    width: 550px;
+    padding: 10px;
+    border: 2px solid black;
+ }

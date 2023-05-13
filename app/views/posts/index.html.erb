@@ -1,1 +1,12 @@
-<h1>This is all the users posts</h1>
+<section>
+    <h1>This is all the users posts</h1>
+    <%= render 'users/user' %>
+    <% 2.times do%>
+        <%= render 'post' %>
+        <div class="post_item">
+            <% 5.times do%>
+                <%= render 'comment' %>
+            <% end %>
+        </div>
+    <% end %>
+</section>
