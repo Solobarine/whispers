@@ -5,7 +5,7 @@
             <div class="short_user">
                 <div class="profile_image"></div>
                 <div class="short_bio">
-                    <h3><%= user.name %></h3>
+                    <%= link_to "#{user.name}", user_path(user.id)  %>
                     <p>Number of Posts  <small><%= user.posts_counter %></small></p>
                 </div>
             </div>

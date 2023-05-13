@@ -51,7 +51,7 @@ RSpec.describe 'Posts', type: :request do
 
       it 'Response body must include correct text' do
         get user_post_path(author.id, post.id)
-        expect(response.body).to match(/>Post by user/)
+        expect(response.body).to match(/>Whispers/)
       end
     end
   end

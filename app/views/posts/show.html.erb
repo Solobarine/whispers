@@ -1,8 +1,10 @@
 <section id="single_post">
     <div id="description">
         <div id="top">
-            <h4>Post by user</h4>
-            <small>Comments x, likes y</small>
+            <h4>
+                <%= @post.title%>
+            </h4>
+            <small>Comments <%= @post.comments_counter %>, likes <%= @post.likes_counter %></small>
         </div>
        <%= @post.title %>
        <%= @post.text%>
