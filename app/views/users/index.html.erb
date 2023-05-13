@@ -1,8 +1,14 @@
 <section id="all_users">
     <h1>This a list of all users</h1>
     <div>
-        <% 5.times do %>
-            <%= render 'user' %>
+        <% @users.each do |user| %>
+            <div class="short_user">
+                <div class="profile_image"></div>
+                <div class="short_bio">
+                    <h3><%= user.name %></h3>
+                    <p>Number of Posts  <small><%= user.posts_counter %></small></p>
+                </div>
+            </div>
         <% end %>
     </div>
 </section>

@@ -1,8 +1,18 @@
 <section>
     <h1>This is all the users posts</h1>
-    <%= render 'users/user' %>
-    <% 2.times do%>
-        <%= render 'post' %>
+    <div class="short_user">
+        <div class="profile_image"></div>
+        <div class="short_bio">
+            <h3><%= @user.name %></h3>
+            <p>Number of Posts  <small><%= @user.posts_counter %></small></p>
+        </div>
+    </div>
+    <% @posts.each do |post|%>
+        <h1>Posts</h1>
+        <div class="post_preview">
+        <p><%= post.text%></p>
+    <small>Comments x, likes y</small>
+</div>
         <div class="post_item">
             <% 5.times do%>
                 <%= render 'comment' %>

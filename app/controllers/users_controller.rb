@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   def index
-    render 'index'
+    @users = User.all
   end
 
   def show
-    render 'user'
+    @user = User.find(params[:id])
+    @posts = @user.posts.all.limit(3)
   end
 end
