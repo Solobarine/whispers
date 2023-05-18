@@ -36,12 +36,12 @@ RSpec.describe 'Users', type: :request do
 
       it 'Must display the correct template' do
         get user_path(author.id)
-        expect(response).to render_template(:user)
+        expect(response).to render_template(:show)
       end
 
       it 'Response body must include correct text' do
         get user_path(author.id)
-        expect(response.body).to match(/>This is the details of a User/)
+        expect(response.body).to match(/Number of Posts/)
       end
     end
   end

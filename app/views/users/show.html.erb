@@ -1,0 +1,22 @@
+<section id="single_user">
+     <div class="short_user">
+        <div class="profile_image"></div>
+        <div class="short_bio">
+            <h3><%= @user.name %></h3>
+            <p>Number of Posts  <small><%= @user.posts_counter %></small></p>
+        </div>
+    </div>
+    <p id="bio">
+        <%= @user.bio %>
+    </p>
+    <div id="user_posts">
+        <%= @posts.each do |post|%>
+            <div class="post_preview">
+                <%= link_to "#{post.title}", user_post_path(@user.id, post.id) %>
+                <p><%= post.text%></p>
+                <small>Comments <%= post.comments_counter %>, Likes <%= post.likes_counter %></small>
+            </div>
+        <% end %>
+    </div>
+   <%= link_to 'See All Posts', user_posts_path(@user.id) %> 
+</section>
