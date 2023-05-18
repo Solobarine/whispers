@@ -6,12 +6,25 @@
             </h4>
             <small>Comments <%= @post.comments_counter %>, likes <%= @post.likes_counter %></small>
         </div>
-       <%= @post.title %>
-       <%= @post.text%>
+        <%= @post.id %>
+        <div>
+            <%= @post.title %>
+            <%= @post.text%>
+        </div>
     </div>
+    <%= @like = current_user.likes.find_by(post: @post) %>
+    <%= @like %>
+    <% if @like.nil? %>
+        <%= button_to "Like", user_post_likes_path(current_user, @post), method: :post %>
+    <% else %>
+        <%= button_to "Unlike", like_path(@like.id) , method: :delete %>
+    <% end %>
     <div id="post_comments">
-        <% 10.times do %>
+        <% 1.times do %>
             <%= render 'comment' %>
         <% end %>
+    </div>
+    <div id="comment_form">
+        <%= render 'comments/form', post: @post%>
     </div>
 </section>

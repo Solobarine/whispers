@@ -1,0 +1,19 @@
+<%= form_with model: @post, url: user_posts_path(current_user) do |form| %>
+
+  <%= form.hidden_field :author_id, value: current_user.id %>
+  
+  <fieldset class="mb-3">
+    <div><%= form.label :title %></div>
+    <div><%= form.text_field :title %></div>
+  </fieldset>
+    
+  <fieldset class="mb-3">
+    <div><%= form.label :text %></div>
+    <div><%= form.text_area :text %></div>
+  </fieldset>
+
+  <div class='mt-3'>
+    <%= form.submit class:'btn btn-primary' %>
+  </div>
+
+<% end %>
