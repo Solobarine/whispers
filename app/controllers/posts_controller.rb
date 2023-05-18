@@ -13,7 +13,7 @@ class PostsController < ApplicationController
       comments_counter: 0,
       likes_counter: 0
     )
-    
+
     if @post.save
       redirect_to user_posts_path(@user)
     else
