@@ -3,7 +3,9 @@
     <div>
         <% @users.each do |user| %>
             <div class="short_user">
-                <div class="profile_image"></div>
+                <div class="profile_image">
+                    <img src="<%= user.photo =%>">
+                </div>
                 <div class="short_bio">
                     <%= link_to "#{user.name}", user_path(user.id)  %>
                     <p>Number of Posts  <small><%= user.posts_counter %></small></p>

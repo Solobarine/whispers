@@ -1,23 +1,27 @@
 <section>
     <h1>This is all the users posts</h1>
     <div class="short_user">
-        <div class="profile_image"></div>
+        <div class="profile_image">
+            <img src="<%= @user.photo =%>">
+        </div>
         <div class="short_bio">
             <h3><%= @user.name %></h3>
             <p>Number of Posts  <small><%= @user.posts_counter %></small></p>
         </div>
     </div>
+    <h1>Posts</h1>
     <% @posts.each do |post|%>
-        <h1>Posts</h1>
         <div class="post_preview">
          <%= link_to "#{post.title}", user_post_path(@user.id, post.id) %>
         <p><%= post.text%></p>
-    <small>Comments x, likes y</small>
-</div>
+        <small>Comments <%= post.comments_counter%>, likes <%= post.likes_counter%></small>
+        </div>
+        
         <div class="post_item">
-            <% 5.times do%>
-                <%= render 'comment' %>
+            <% post.recent_comments.each do |comment| %>
+               <p><b><%= comment.author.name %>:</b> <%= comment.text %></p>
             <% end %>
         </div>
     <% end %>
+    <%= button_to "See all Posts"%>
 </section>
