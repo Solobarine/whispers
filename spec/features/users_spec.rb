@@ -35,7 +35,6 @@ RSpec.describe 'Users' do
   end
 
   describe 'User #show' do
-
     let!(:user) { User.first }
 
     before do

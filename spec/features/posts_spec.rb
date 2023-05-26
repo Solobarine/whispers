@@ -55,7 +55,7 @@ RSpec.describe 'Posts' do
       expect(page).to have_current_path(user_post_path(@posts[0].author, @posts[0]))
     end
   end
-  
+
   describe 'Posts #show' do
     before do
       @post = Post.first
