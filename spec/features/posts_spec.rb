@@ -5,6 +5,7 @@ RSpec.describe 'Posts' do
       visit user_posts_path(User.first)
       @posts = User.first.posts
     end
+
     it 'Should be able to view profile picture' do
       expect(page).to have_css("img[src*='#{User.first.photo}']")
     end
@@ -54,7 +55,8 @@ RSpec.describe 'Posts' do
       expect(page).to have_current_path(user_post_path(@posts[0].author, @posts[0]))
     end
   end
-  describe 'Posts #index' do
+  
+  describe 'Posts #show' do
     before do
       @post = Post.first
       visit user_post_path(@post.author, @post)
@@ -85,7 +87,7 @@ RSpec.describe 'Posts' do
     end
 
     it 'Should see the comment each commentor left.' do
-      expect(page).to have_content(@post.comments.first.text)
+      expect(page).to have_content(@post.recent_comments.first.text)
     end
   end
 end

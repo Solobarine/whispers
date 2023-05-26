@@ -7,7 +7,7 @@ RSpec.describe 'Users' do
       visit users_path
     end
 
-    it 'Should render Anderson and Sophie in the index page' do
+    it 'Should render the users names in the index page' do
       expect(page).to have_content(@users[0].name)
       expect(page).to have_content(@users[1].name)
       expect(page).to have_content(@users[2].name)
@@ -35,8 +35,11 @@ RSpec.describe 'Users' do
   end
 
   describe 'User #show' do
+
+    let!(:user) { User.first }
+
     before do
-      visit user_path(User.first.id)
+      visit user_path(user.id)
     end
 
     it 'Should be able to view profile picture' do
@@ -56,9 +59,9 @@ RSpec.describe 'Users' do
     end
 
     it 'See Users first three posts' do
-      expect(page).to have_content(User.first.recent_posts[0].title)
-      # expect(page).to have_content(User.first.recent_posts[1].title)
-      # expect(page).to have_content(User.first.recent_posts[2].title)
+      expect(page).to have_content(user.recent_posts[0].title)
+      expect(page).to have_content(User.first.recent_posts[1].title)
+      expect(page).to have_content(User.first.recent_posts[2].title)
     end
 
     it 'Display Button to view Users posts' do
@@ -66,7 +69,7 @@ RSpec.describe 'Users' do
     end
 
     it 'Clicking on User post redirects to User Post Show page' do
-      click_link(User.first.recent_posts[0].title)
+      click_link(user.recent_posts[0].title, match: :first)
       expect(page).to have_current_path(user_post_path(User.first.id, User.first.recent_posts[0].id))
     end
 
