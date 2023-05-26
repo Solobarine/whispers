@@ -14,27 +14,26 @@
  *= require_self
  */
 
- :root {
+:root {
   --primary: #ccc;
   --secondary: rgb(251, 128, 20);
   --text-dark: #555;
- }
+}
 
- 
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   color: var(--text-dark);
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-dark);
+}
 
- header {
+header {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
- }
+}
 
- header ul {
+header ul {
   display: flex;
   justify-content: space-between;
   gap: 1.7rem;
@@ -57,7 +56,7 @@ header button {
 
 .logout {
   border: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--text-dark);
   background-color: transparent;
 }
@@ -95,7 +94,7 @@ header button {
 }
 
 #form > a:hover {
-  color: var(--secondary)
+  color: var(--secondary);
 }
 
 .login :nth-child(4) {
