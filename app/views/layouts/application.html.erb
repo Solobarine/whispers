@@ -10,6 +10,25 @@
   </head>
 
   <body>
+    <header>
+        <h2>Whispers</h2>
+        <% if user_signed_in? %>
+          <ul>
+            <li> <%= link_to 'Home', users_path %> </li>
+            <li> <%= link_to 'Profile', user_path(id: current_user.id) %> </li>
+            <li> <%= link_to 'Posts', user_posts_path(user_id: current_user.id) %> </li>
+            <li> <%= link_to 'Edit Info', edit_user_registration_path %> </li>
+            <li> <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout' %> </li>
+          </ul>
+        <% else %>
+          <ul>
+            <li> <%= link_to 'Sign In', new_user_session_path %> </li>
+            <li> <%= link_to 'Sign Up', new_user_registration_path %> </li>
+          </ul>
+        <% end %>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
