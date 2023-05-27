@@ -1,5 +1,8 @@
 <section id="single_post">
     <div id="description">
+        <h4>
+            <%= @post.author.name%>
+        </h4>
         <div id="top">
             <h4>
                 <%= @post.title%>
@@ -12,16 +15,15 @@
             <%= @post.text%>
         </div>
     </div>
-    <%= @like = current_user.likes.find_by(post: @post) %>
-    <%= @like %>
+    <% @like = current_user.likes.find_by(post: @post) %>
     <% if @like.nil? %>
         <%= button_to "Like", user_post_likes_path(current_user, @post), method: :post %>
     <% else %>
         <%= button_to "Unlike", like_path(@like.id) , method: :delete %>
     <% end %>
     <div id="post_comments">
-        <% 1.times do %>
-            <%= render 'comment' %>
+        <% @post.recent_comments.each do |comment| %>
+            <p><b><%= comment.author.name %>:</b> <%= comment.text %></p>
         <% end %>
     </div>
     <div id="comment_form">

@@ -1,6 +1,8 @@
 <section id="single_user">
      <div class="short_user">
-        <div class="profile_image"></div>
+        <div class="profile_image">
+            <img src="<%= @user.photo =%>">
+        </div>
         <div class="short_bio">
             <h3><%= @user.name %></h3>
             <p>Number of Posts  <small><%= @user.posts_counter %></small></p>
