@@ -164,3 +164,11 @@ header button {
 #edit_user input {
   padding: 10px;
 }
+
+form {
+  margin-top: 20px;
+}
+
+#form input[type=submit] {
+  width: 100%;
+}
